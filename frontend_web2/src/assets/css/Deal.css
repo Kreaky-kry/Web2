@@ -1,0 +1,50 @@
+.text_name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-weight: bold;
+
+
+
+}
+
+.text_price {
+
+    color: red;
+    font-weight: bold;
+}
+
+.text_plus {
+    font-style: oblique;
+    color: gray;
+    border-radius: 10px;
+    background-color: bisque;
+    height: 35px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.title-time-deal {
+    font-size: 30px;
+    font-weight: bolder;
+    animation: text-time-deal 1s infinite;
+}
+
+@keyframes text-time-deal {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    100% {
+        color: red;
+    }
+
+}
+
+

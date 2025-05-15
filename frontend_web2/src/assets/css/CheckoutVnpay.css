@@ -1,0 +1,71 @@
+/* Container tổng để canh giữa giao diện */
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiều cao toàn bộ màn hình */
+    background-color: #f9f9f9; /* Màu nền tổng quát */
+  }
+  
+  /* Hộp chứa nội dung chính */
+  .checkout-box {
+    text-align: center;
+    background-color: light;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  }
+  
+  /* Biểu tượng thành công (✔) */
+  .success-icon {
+    font-size: 50px;
+    color: #4caf50; /* Màu xanh lá cây cho biểu tượng ✔ */
+    margin-bottom: 10px;
+  }
+  
+  /* Thông báo thành công */
+  .success-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+    margin-bottom: 20px;
+  }
+  
+  /* Chi tiết đơn hàng */
+  .order-details {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .order-id {
+    font-weight: bold;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  /* Kiểu thanh toán */
+  .payment-method {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  /* Nút quay lại */
+  .return-button {
+    background-color: #1976d2;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .return-button:hover {
+    background-color: #155a9e;
+  }
+  

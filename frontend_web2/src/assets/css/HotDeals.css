@@ -1,0 +1,98 @@
+#hot-deal.section {
+  padding: 10px 0px;
+  margin: 10px 0px;
+ 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hot-deal {
+  text-align: center;
+  width: 600px;
+}
+
+/* .hot-deal .hot-deal-countdown {
+  margin-bottom: 10px;
+} */
+
+.hot-deal .hot-deal-countdown > li {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #71caf4e6;
+  text-align: center;
+  border-radius: 10%;
+  margin: 0px 5px;
+}
+
+.hot-deal .hot-deal-countdown > li > div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hot-deal .hot-deal-countdown > li > div h3 {
+  color:black;
+  margin-bottom: 0px;
+}
+
+.hot-deal .hot-deal-countdown > li > div span {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  color:black;
+}
+
+.hot-deal p {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+/* .hot-deal .cta-btn {
+  margin-top: 15px;
+} */
+/* Container chính để căn giữa nội dung */
+.content {
+  text-align:left; /* Căn giữa tiêu đề và container của đồng hồ */
+  margin: 0 auto;
+  max-width: 750px; /* Tùy chỉnh độ rộng tối đa của container nếu cần */
+}
+
+/* Tiêu đề */
+.title{
+  font-size: 30px;
+  font-weight: bolder;
+  color: gold;
+}
+
+
+/* Container chứa văn bản và bộ đếm */
+.timer-container {
+  display: flex; /* Sử dụng flexbox để sắp xếp trên cùng một hàng */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+}
+
+/* Văn bản "Kết thúc trong:" */
+
+
+/* Component đếm ngược */
+.hot-deal-countdown {
+  display: flex; /* Sắp xếp các phần tử đếm ngược theo hàng ngang */
+  gap: 5px; /* Khoảng cách giữa các phần tử đếm ngược */
+}
+
+.hot-deal-countdown li {
+  list-style: none;
+  text-align: center;
+}
+.end{
+  color: white;
+  width: 120px;
+}

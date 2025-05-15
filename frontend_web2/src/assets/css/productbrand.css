@@ -1,0 +1,14 @@
+.NoProduct {
+  
+  padding: 10px 0px;
+  font-size: 15px;
+  font-style: oblique;
+  color: rgb(54, 57, 5);
+  margin-bottom: 150px;
+  background-color: rgb(245, 245, 148);
+}
+
+.content-deal {
+  display: flex;
+  justify-content: center;
+}

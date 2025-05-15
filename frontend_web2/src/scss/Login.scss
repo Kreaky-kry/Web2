@@ -1,0 +1,36 @@
+.Login {
+    width: 400px;
+    border-radius: 15px;
+    margin: auto;
+    //height: 100vh;
+    background: linear-gradient(135deg, rgba(34, 193, 195, 1)0%, rgba(253, 187, 45, 1)100%);
+    //background-color: #0a58ca;
+    //background-color: white;
+
+
+    .button {
+        .signin {
+            background-color: rgb(84, 162, 211);
+        }
+    }
+
+
+    .content-login {
+        margin-top: 20px;
+        padding: 15px;
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .register {
+            float: right;
+        }
+    }
+
+
+
+
+}

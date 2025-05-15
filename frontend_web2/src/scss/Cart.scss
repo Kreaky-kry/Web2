@@ -1,0 +1,49 @@
+// .product-detail {
+//     display: flex;
+//     background-color: white;
+//     padding: 10px;
+
+//     .infor {
+//         align-content: center;
+//     }
+
+
+
+// }
+
+.money {
+    align-content: center;
+    text-align: center;
+}
+
+thead {
+    text-align: center;
+}
+// .ProductCartDetail{
+//     float: right;
+// }
+
+#btn {
+    background-color: white;
+    border: 1px solid gray;  /* Viền màu xám */
+    color: black;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none; /* Loại bỏ viền khi nhấn */
+    box-shadow: none; /* Loại bỏ hiệu ứng bóng */
+}
+
+#btn:hover {
+    background-color: #f0f0f0; /* Hiệu ứng hover nhẹ */
+}
+
+#numberquantity {
+    text-align: center;
+    border: 1px solid gray; /* Viền xám */
+    padding: 5px;
+    font-size: 16px;
+    width: 40px; /* Tăng chiều rộng để dễ nhìn hơn */
+    outline: none; /* Loại bỏ viền khi focus */
+    box-shadow: none; /* Không có bóng */
+}

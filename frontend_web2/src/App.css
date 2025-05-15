@@ -1,0 +1,311 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 10px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.Top-header {
+  height: 77px;
+  padding: 10px;
+}
+
+.Top-header .search {
+  display: flex;
+}
+
+.Top-header .search .icon-search {
+  border-radius: 5px;
+}
+
+.Top-header .img-header {
+  width: 100%;
+}
+
+.Top-header .box-right {
+  display: flex;
+  align-items: center;
+}
+
+.Top-header .box-right .CTP {
+  display: flex;
+  margin-right: 20px;
+}
+
+.Top-header .box-right .CTP .icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.Top-header .box-right .CTST {
+  display: flex;
+}
+
+.Top-header .box-right .CTST .icon {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.content-header {
+  background-color: #503eb6;
+  padding: 10px;
+}
+
+.content-header .container .hot-product {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.content-header .container .hot-product .item-product {
+  display: inline-flex;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  justify-content: flex-end;
+}
+
+.content-header .container .hot-product .item-product .icon-hot {
+  position: absolute;
+}
+
+.content-header .container .function {
+  display: flex;
+  margin-top: 5px;
+}
+
+.content-header .container .function a {
+  text-decoration: none;
+  color: #f1f1f1;
+}
+
+.content-header .container .function a:hover {
+  color: #ffb700;
+}
+
+.content-header .container .function .user {
+  margin-right: 20px;
+}
+
+.policy {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: white;
+}
+
+.policy .row {
+  margin-left: 2px;
+}
+
+.policy .content {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin-right: 25px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+.policy .content .icon-policy {
+  margin-right: 5px;
+  margin-top: 6px;
+}
+
+.policy .content .content-policy {
+  text-align: center;
+  margin-top: 4px;
+  color: #503eb6;
+}
+
+.popular-categories a:hover {
+  color: #ffb700;
+}
+
+.popular-categories a {
+  text-decoration: none;
+  position: relative;
+}
+
+.popular-categories .content .img {
+  transition: all 1s ease;
+}
+
+.popular-categories .content .img:hover {
+  transform: scale(0.9);
+}
+
+.my-deal {
+  background: #503eb6;
+  border-radius: 10px;
+}
+
+.my-deal .content .box-deal {
+  display: flex;
+}
+
+.my-deal .content .box-deal .set-time {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.my-deal .content .box-deal .set-time .icon {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.my-deal .content .box-deal .is-going-on {
+  text-align: center;
+}
+
+.my-deal .content .box-deal .is-going-on a {
+  text-decoration: none;
+  color: white;
+}
+
+.my-deal .content .box-deal .coming-soon {
+  text-align: center;
+}
+
+.my-deal .content .box-deal .coming-soon a {
+  text-decoration: none;
+  color: white;
+}
+
+.my-deal .content .content-deal {
+  justify-content: center;
+}
+
+.my-deal .content .content-deal .col-2 {
+  box-sizing: content-box;
+}
+
+.my-deal .content .content-deal .col-2 .img {
+  transition: all .5s ease;
+}
+
+.my-deal .content .content-deal .col-2 .img:hover {
+  transform: scale(0.9);
+}
+
+.footer {
+  background-color: #f1f1f1;
+}
+
+.footer .mid-footer {
+  padding: 20px;
+}
+
+.footer .mid-footer .row {
+  font-size: 14px;
+}
+
+.footer .mid-footer .row .hotline {
+  display: grid;
+}
+
+.footer .mid-footer .row .rounded-full {
+  display: flex;
+  background-color: #6b54c6;
+  border-radius: 10px;
+  border: 1px solid #6b54c6;
+}
+
+.footer .mid-footer .row .social-toogle .facebook {
+  background: #503eb6;
+  color: white;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.footer .mid-footer .row .social-toogle .instagram {
+  background: linear-gradient(29.61deg, #f38334 0%, #da2e7d 50.39%, #6b54c6 100%);
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 15px;
+}
+
+.footer .mid-footer .row .social-toogle .youtube {
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  color: white;
+  margin-right: 15px;
+}
+
+.footer .mid-footer .row .pay {
+  display: inline-flex;
+}
+
+.footer .mid-footer .row .pay .payment {
+  background-color: antiquewhite;
+  border-radius: 5px;
+  width: 40px;
+  height: 30px;
+  margin-right: 15px;
+}
+
+.Login {
+  width: 400px;
+  border-radius: 15px;
+  margin: auto;
+  background: linear-gradient(135deg, #22c1c3 0%, #fdbb2d 100%);
+}
+
+.Login .button .signin {
+  background-color: #54a2d3;
+}
+
+.Login .content-login {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.Login .content-login a {
+  text-decoration: none;
+  color: black;
+}
+
+.Login .content-login .register {
+  float: right;
+}
+
+.my-comeback {
+  background-color: antiquewhite;
+  padding: 15px;
+}
+
+.my-comeback a {
+  text-decoration: none;
+  color: black;
+  font-style: italic;
+}
+
+.Follow .span {
+  border-bottom: 1px solid black;
+}
+
+.Follow .content .img-follow {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  box-sizing: content-box;
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=App.css.map */

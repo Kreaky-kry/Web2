@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <link rel="icon" href="//bizweb.dktcdn.net/100/497/960/themes/923878/assets/favicon.png?1726452627090"
+    type="image/x-icon">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <style>
+    /* CSS cho nút "Trở về phía trên" */
+    .back-to-top {
+      position: fixed;
+      bottom: 170px;
+      right: 20px;
+      z-index: 100;
+      background-color: darkslateblue;
+      color: white;
+      border: none;
+
+      border-radius: 50%;
+      /* Làm cho nút tròn */
+      cursor: pointer;
+      display: none;
+      /* Ẩn nút ban đầu */
+      opacity: 0.7;
+      width: 50px;
+      /* Đặt kích thước cho nút */
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .back-to-top:hover {
+      background-color: darkslateblue;
+      opacity: 1;
+    }
+
+    .bi-arrow-up-circle {
+      font-size: 1.5rem;
+      /* Thay đổi kích thước icon */
+    }
+
+    /* Định dạng nút zalo */
+    .zalo-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #0084ff;
+      /* Màu nền của nút */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+      /* Hiệu ứng nhịp tim */
+    }
+
+    /* Biểu tượng Zalo */
+    .zalo-button img {
+      width: 35px;
+      height: 35px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Hiệu ứng khi di chuột vào */
+    .zalo-button:hover {
+      background-color: #0068cc;
+      transform: scale(1.1);
+      /* Phóng to nút khi di chuột */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .zalo-button:hover img {
+      transform: scale(1.2);
+      /* Phóng to biểu tượng khi di chuột */
+    }
+
+    /* Hiệu ứng nhịp tim (pulse) */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    /* Nút liên hệ */
+    .contact-button {
+      position: fixed;
+      bottom: 100px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .button-icon {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background-color: #0084ff;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      overflow: hidden;
+      z-index: 1001;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-icon:hover {
+      background-color: #0068cc;
+    }
+
+    .contact-button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: rgba(0, 132, 255, 0.5);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      animation: ripple 2s infinite;
+      z-index: 0;
+    }
+
+    @keyframes ripple {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Bảng liên hệ (ẩn mặc định) */
+    .contact-menu {
+      display: none;
+      position: absolute;
+      bottom: 60px;
+      right: 0;
+      width: 220px;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Danh sách các tùy chọn */
+    .contact-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-menu ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .contact-menu ul li:last-child {
+      border-bottom: none;
+    }
+
+    .contact-menu ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .contact-menu ul li a:hover {
+      color: #0084ff;
+      font-weight: bold;
+    }
+
+    /* Hiệu ứng khi hiển thị menu */
+    .contact-menu.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* Hiệu ứng fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <button class="back-to-top" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+    </svg>
+  </button>
+
+  <div class="contact-button">
+    <div class="button-icon" onclick="toggleContactMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-left-text"
+        viewBox="0 0 16 16">
+        <path
+          d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+        <path
+          d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+      </svg>
+    </div>
+    <div id="contact-menu" class="contact-menu">
+      <ul>
+        <li><a href="tel:0123456789">📞 Gọi tổng đài</a></li>
+        <li><a href="https://zalo.me/yourZaloLink" target="_blank">💬 Chat với Zalo</a></li>
+        <li><a href="#store-info">🏠 Thông tin cửa hàng</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div class="zalo-button">
+    <a href="https://zalo.me/0392083871" target="_blank">
+      <img src="https://stc-zaloid.zdn.vn/zaloid/client/images/favicon.png" alt="Zalo" />
+    </a>
+  </div>
+
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script>
+    // JavaScript để điều khiển sự xuất hiện của nút và cuộn trang lên trên
+    window.addEventListener('scroll', function () {
+      const button = document.querySelector('.back-to-top');
+
+      if (window.scrollY > 300) {
+        button.style.display = 'block';
+      } else {
+        button.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+
+    function toggleContactMenu() {
+      var menu = document.getElementById('contact-menu');
+      if (menu.classList.contains('show')) {
+        menu.classList.remove('show');
+      } else {
+        menu.classList.add('show');
+      }
+    }
+
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

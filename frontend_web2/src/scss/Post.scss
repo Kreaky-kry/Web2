@@ -1,0 +1,35 @@
+.post {
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .item-list-orther {
+        span {
+            font-size: small;
+        }
+
+        b {
+            color: cornflowerblue;
+        }
+    }
+}
+
+.post-detail {
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: aqua;
+    }
+
+    .xemthem {
+        background: linear-gradient(180deg, #9399ff 0%, #a1a6f6 50%, #d6d7ff 100%);
+        //border: 1px solid black;
+        padding: 5px;
+        display: inline-block;
+    }
+}
